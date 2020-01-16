@@ -82,6 +82,9 @@ public:
 	Note * addStepNote( int step );
 	void setStep( int step, bool enabled );
 
+  void split (const MidiTime cutPoint);
+  void offsetNotes (const MidiTime offset);
+
 	// pattern-type stuff
 	inline PatternTypes type() const
 	{

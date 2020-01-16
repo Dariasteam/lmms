@@ -140,6 +140,7 @@ public:
 	virtual void saveTrackSpecificSettings( QDomDocument & _doc,
 							QDomElement & _parent ) override;
 	void loadTrackSpecificSettings( const QDomElement & _this ) override;
+  virtual void splitTCO (TrackContentObject* tco, MidiTime cutPoint) override {}
 
 	static BBTrack * findBBTrack( int _bb_num );
 	static void swapBBTracks( Track * _track1, Track * _track2 );

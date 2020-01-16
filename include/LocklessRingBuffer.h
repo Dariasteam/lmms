@@ -122,7 +122,6 @@ public:
 	void waitForData()
 	{
 		QMutex useless_lock;
-		useless_lock.lock();
 		m_notifier->wait(&useless_lock);
 		useless_lock.unlock();
 	}

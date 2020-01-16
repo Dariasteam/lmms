@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Track.h - declaration of classes concerning tracks -> necessary for all
  *           track-like objects (beat/bassline, sample-track...)
  *
@@ -176,7 +176,7 @@ private:
 
 	MidiTime m_startPosition;
 	MidiTime m_length;
-	MidiTime m_startTimeOffset;
+  MidiTime m_startTimeOffset;
 
 	BoolModel m_mutedModel;
 	BoolModel m_soloModel;
@@ -546,6 +546,7 @@ public:
 
 	void createTCOsForBB( int bb );
 
+  virtual void splitTCO (TrackContentObject* tco, MidiTime cutPoint) = 0;
 
 	void insertBar( const MidiTime & pos );
 	void removeBar( const MidiTime & pos );

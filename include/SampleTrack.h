@@ -128,7 +128,6 @@ private:
 
 
 
-
 class SampleTrack : public Track
 {
 	Q_OBJECT
@@ -145,6 +144,7 @@ public:
 	virtual void saveTrackSpecificSettings( QDomDocument & _doc,
 							QDomElement & _parent ) override;
 	void loadTrackSpecificSettings( const QDomElement & _this ) override;
+  virtual void splitTCO (TrackContentObject* tco, MidiTime cutPoint) override {}
 
 	inline IntModel * effectChannelModel()
 	{

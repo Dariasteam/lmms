@@ -146,6 +146,8 @@ public:
 
 	using Track::setJournalling;
 
+  virtual void splitTCO ( TrackContentObject* tco, MidiTime cutPoint);
+
 
 	// load instrument whose name matches given one
 	Instrument * loadInstrument(const QString & _instrument_name,

@@ -63,7 +63,7 @@ public:
 	enum EditMode
 	{
 		DrawMode,
-		SelectMode
+    SelectMode
 	};
 
 	SongEditor( Song * song );
@@ -86,6 +86,7 @@ public slots:
 	void setEditMode( EditMode mode );
 	void setEditModeDraw();
 	void setEditModeSelect();
+  void useRazor();
 	void toggleProportionalSnap();
 
 	void updatePosition( const MidiTime & t );
@@ -210,6 +211,7 @@ private:
 	ActionGroup * m_editModeGroup;
 	QAction* m_drawModeAction;
 	QAction* m_selectModeAction;
+  QAction* m_razorModeAction;
 	QAction* m_crtlAction;
 
 	ComboBox * m_zoomingComboBox;
